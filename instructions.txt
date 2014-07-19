@@ -1,0 +1,34 @@
+Purpose
+A simple email sender program to send Email via Gmail SMTP SSL
+For the program to work edit the emailOut.props file with the appropriate credentials.
+
+Usage: java -jar Mailer.jar -t addresselist [-f PATH_TO_FILE_DATA] [-s subject] [-a Path_File_to_attach] [-d]
+Separate multiple email address list with a comma (,).
+
+A complete program execution script
+cat manifest | java -jar MailUtility.jar -t email1@destination.com,email2@destination2.com -s test_manifest
+
+The Project dependencies
+activation.jar
+jdom.jar
+mial-1.32.jar
+sax2.jar
+
+To compile the source code 
+The easy way:
+ant install
+
+The distribution file will be in the dist directory as well in the project directory.
+
+The hard way:
+2 Easy steps
+
+1> change directory (cd) into src and run these commands
+javac -cp .:../jars/* com/ibcinc/development/utilities/email/*.java
+javac -cp .:../jars/* com/ibcinc/development/utilities/file/*.java
+
+
+2> Create MailUtility.jar
+jar -cvfm ../MailUtility.jar ../manifest com
+
+

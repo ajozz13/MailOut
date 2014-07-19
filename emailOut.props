@@ -1,0 +1,3 @@
+#prop file for GMAIL outgoing email
+username=your_gmail_username@gmail.com
+pass=your_gmail_pass
